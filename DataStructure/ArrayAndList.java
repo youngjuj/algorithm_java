@@ -31,27 +31,18 @@ public class ArrayAndList {
         /** 강의 보기 전 **/
         String input = "3 40 80 60";
         String[] inputArray = input.split(" ");
-        int[] inputNumArray = new int[inputArray.length];
-        int answer = 0;
+        long answer = 0;
+        long max = 0;
 
-        for(int i = 0; i < inputNumArray.length; i++){
-            inputNumArray[i] = Integer.parseInt(inputArray[i]);
+        for(int i = 0; i < inputArray.length; i++){
+            int num = Integer.parseInt(inputArray[i]);
+            if(i > 0) {
+                max = max < num ? num : max;
+                answer += num;
+            }
         }
 
-        int max = inputNumArray[1];
-
-        for (int i = 1; i < inputNumArray.length; i++) {
-            max = max < inputNumArray[i] ? inputNumArray[i] : max;
-        }
-        System.out.println("max : " + inputNumArray[0] + max);
-
-        for (int i = 1; i < inputNumArray.length; i++) {
-            answer += inputNumArray[i];
-            System.out.println(answer);
-        }
-
-        System.out.println(answer);
-        System.out.printf("%.2f", answer * 100 / max / inputNumArray[0]);
+        System.out.printf("%.2f", (float)answer * 100 / max / (inputArray.length -1));
 
         /** 강의 풀이**/
         // step1) 문제 분석하기
