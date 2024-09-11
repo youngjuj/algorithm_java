@@ -1,5 +1,6 @@
 package DataStructure;
 
+
 public class ArrayAndList {
     public static void main(String[] args) {
         //배열과 리스트
@@ -13,7 +14,6 @@ public class ArrayAndList {
 //            given /= 10;
 //        }
 //        System.out.println(answer);
-
         /** 강의 풀이 **/
         // 주어지는 숫자의 길이 제한이 없기 때문에 얼마나 긴 숫자가 주어질지 모른다
         // 그렇다면 int, long 불가능 -> String으로 사용하기
